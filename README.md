@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Link OProc
+OProc is a process behavioral and memory forensic analyzer for Linux. It tracks process trees, maps sockets and open files, extracts memory strings and can dump process memory for authorized forensic analysis. It also includes a lightweight intrusion-detection mode.
 
 ---
 
 ## ✨ Features
 
-- Process and runtime forensics — tree, memory, IDS, namespaces
+- Process-tree tracking with socket and open-file mapping
+- Memory string extraction and process memory dump
+- Live process watching by PID
+- Environment scan for secret-like keys
+- Namespace and cgroup inspection per PID
+- Two-PID comparison, IDS mode and JSON/HTML export
 
 ---
 
@@ -38,7 +43,10 @@ Link OProc
 ## 🚀 Usage
 
 ```bash
-./OProc
+./OProc --batch 1234
+./OProc --watch 1234
+./OProc --compare 1000 2000
+./OProc --help
 ```
 
 ---
